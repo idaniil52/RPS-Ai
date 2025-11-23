@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rock, Paper, Scissors – AI vs You</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <h1>Rock, Paper, Scissors – AI vs You</h1>
+
+  <div class="container">
+    <video id="cam" autoplay playsinline></video>
+
+    <div id="status">Loading model…</div>
+
+    <button id="play-btn" disabled>PLAY ROUND</button>
+
+    <div id="result-area">
+      <div>Your Move: <span id="your-move">–</span></div>
+      <div>AI Move: <span id="ai-move">–</span></div>
+      <div>Outcome: <span id="outcome">–</span></div>
+    </div>
+
+    <div id="scoreboard">
+      <p>Wins: <span id="wins">0</span></p>
+      <p>Losses: <span id="losses">0</span></p>
+      <p>Ties: <span id="ties">0</span></p>
+    </div>
+  </div>
+
+  <!-- Teachable Machine expects TFJS 3.x -->
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@3.18.0/dist/tf.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@0.8/dist/teachablemachine-image.min.js"></script>
+
+  <script src="script.js"></script>
+</body>
+</html>
