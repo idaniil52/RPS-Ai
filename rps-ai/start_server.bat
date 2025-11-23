@@ -1,13 +1,14 @@
 @echo off
 echo Starting local server...
 
-REM Start a simple Python HTTP server on port 8000
-python -m http.server 8000
+REM Start Python HTTP server in background
+start /B python -m http.server 8000
 
-REM Wait a second for the server to start
-timeout /t 1 /nobreak >nul
+REM Wait a second for the server to boot
+timeout /t 2 >nul
 
-REM Auto-open Chrome pointing to your index.html
+REM Auto-open Chrome
 start chrome http://localhost:8000/index.html
 
+echo Server running. Press CTRL+C to stop.
 pause
